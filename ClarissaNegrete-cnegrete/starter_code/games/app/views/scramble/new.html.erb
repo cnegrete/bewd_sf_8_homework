@@ -1,0 +1,17 @@
+<h1>Welcome to Scramble!</h1>
+<p>To play this game, all you have to do is unscramble the letters and guess what the word is. If you guess the word, you win!</p>
+<p>Think carefully... you only get one try!</p>
+<h2>Enter the word:</h2>
+<%= @word.shuffle %>
+
+
+  <div class= "word">
+    <%= f.label :word %><br>
+    <%= f.hidden_field :word %>
+  </div>
+  <div class= "enter">
+    <%= f.label :guess %><br>
+    <%= f.text_field :guess %>
+  </div>
+
+

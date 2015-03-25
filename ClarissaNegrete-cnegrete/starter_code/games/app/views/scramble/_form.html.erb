@@ -1,0 +1,14 @@
+
+<%= form_for(@guess) do |f| %>
+  <% if @animal.errors.any? %>
+    
+
+  <div class="word">
+    <%= f.label :word %><br>
+    <%= f.hidden :word %>
+  </div>
+  <div class="enter">
+    <%= f.label :guess %><br>
+    <%= f.text_field :guess %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>RockPaperScissors#new</h1>
+<p>Choose 0 for rock, 1 for paper, and 2 for scissors</p>
+
+
+<ul>
+  <% 0.upto(2) do |number| %>
+    <li><%= link_to number, rock_paper_scissor_path(number) %></li>
+  <% end %>
+</ul>
