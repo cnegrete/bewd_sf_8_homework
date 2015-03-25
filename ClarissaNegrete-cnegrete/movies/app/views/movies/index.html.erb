@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<h1>
+<div align="center"><font color="009999">
+  Movie List
+</div></font>
+</h1>
+<style>
+body {
+	background: url(https://www.directv.com/img/movies.jpg);
+	background-size: cover;
+	
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Year Released</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><div align="justify"><%= movie.title %></div></td>
+        <td><%= movie.description %></td>
+  		<td><div align="right"><%= movie.year_released %></div></td>
+      </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
