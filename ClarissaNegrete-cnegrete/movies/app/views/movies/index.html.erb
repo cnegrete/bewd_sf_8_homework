@@ -9,8 +9,15 @@ body {
 	background: url(https://www.directv.com/img/movies.jpg);
 	background-size: cover;
 	
-}
+} table {
+	border: 2px solid black;
+	width: 100%;
+	padding: 15px;}
 </style>
+<br>
+<br>
+<br>
+<br>
 <table>
   <thead>
     <tr>
@@ -24,13 +31,15 @@ body {
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><div align="justify"><%= movie.title %></div></td>
-        <td><%= movie.description %></td>
-  		<td><div align="right"><%= movie.year_released %></div></td>
+        <td><div align="center"><%= movie.title %></div></td>
+        <td><div align="center"><%= movie.description %></div></td>
+  		<td><div align="center"><%= movie.year_released %></div></td>
       </tr>
       </div>
     <% end %>
   </tbody>
 </table>
 <br>
+
+<%= link_to 'New Movie', new_movie_path %>
 
