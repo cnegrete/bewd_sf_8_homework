@@ -1,48 +1,49 @@
 class MoviesController < ApplicationController
-  def index
-  	@movies = Movie.all
-  end
+  	def index
+  		@movies = Movie.search(params[:q])
+  		
+ 	 end
 
-   def show
-   	 @movie = Movie.find(params[:id])
-   end
+   	def show
+   	 @movies = Movie.find(params[:id])
+   	end
 
-   def new
-    @movie = Movie.new
+   	def new
+   	 @movies = Movie.new
 	end
   
    def edit
-   	@movie = Movie.find(params[:id])
+   	@movies = Movie.find(params[:id])
    end
 
-  def create
-    @movie = Movie.new(movie_params)
+  	def create
+    @movies = Movie.new(movie_params)
 
     respond_to do |format|
-      if @movie.save
-        format.html { redirect_to @movie, notice: 'Movie was successfully added.' }
-        format.json { render :show, status: :created, location: @movie }
+      if @movies.save
+        format.html { redirect_to @movies, notice: 'Movie was successfully added.' }
+        format.json { render :show, status: :created, location: @movies }
       else
         format.html { render :new }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
+        format.json { render json: @movies.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def update
     respond_to do |format|
-      if @movie = Movie.find(params[:id])
-        format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @movie }
+      if @movies = Movie.find(params[:id])
+        format.html { redirect_to @movies, notice: 'Movie was successfully updated.' }
+        format.json { render :show, status: :ok, location: @movies }
       else
         format.html { render :edit }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
+        format.json { render json: @movies.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
-    @movie.destroy
+    @movies.destroy
     respond_to do |format|
       format.html { redirect_to animals_url, notice: 'Movie was successfully destroyed.' }
       format.json { head :no_content }
@@ -51,11 +52,11 @@ class MoviesController < ApplicationController
 
   private
     def set_movie
-      @movie = Movie.find(params[:id])
+      @movies = Movie.find(params[:id])
     end
 
     def movie_params
-      params.require(:movie).permit(:title, :description, :year_updated)
+      params.require(:movie).permit(:title, :description, :year_released)
     end
 end
 

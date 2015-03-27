@@ -29,6 +29,12 @@ body {
   </thead>
 
   <tbody>
+
+ 	<%= form_tag movies_path, method: 'GET' do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag 'Search' %>
+	<% end %>
+
     <% @movies.each do |movie| %>
       <tr>
         <td><div align="center"><%= movie.title %></div></td>
@@ -40,6 +46,7 @@ body {
   </tbody>
 </table>
 <br>
+
 
 <%= link_to 'New Movie', new_movie_path %>
 
