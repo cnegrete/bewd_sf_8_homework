@@ -1,5 +1,19 @@
-<h1>Shortcuts Maker</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', shortcuts_path %>
+<p id="notice"><%= notice %></p>
+<h1>Shortcut Generator</h1>
+
+<p>
+  <strong>Your Link:</strong>
+  <%= @shortcut.my_link %>
+</p>
+
+<p>
+  <strong>Your Shortcut:</strong>
+  <%= @shortcut.hash_code %>
+</p>
+
+
+ <%= link_to @shortcut.hash_code, @shortcut.my_link %>
+ <br>
+<%= link_to 'Back', new_shortcut_path %>

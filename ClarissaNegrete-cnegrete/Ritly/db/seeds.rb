@@ -6,16 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 puts "Creating shortcuts"
-Theshortcut.create [
+Shortcut.create [
   {
     my_link: "http://www.generalassemb.ly",
     hash_code: "516396"
   },
   {
-    my_link: "http://www.google.com|234687",
+    my_link: "http://www.google.com",
     hash_code: "234687"
   },
   {
     my_link: "http://www.bustedtees.com",
     hash_code: "093674"
-  }]
+  }
+]

@@ -1,13 +1,11 @@
-  <div class="field">
-    <%= f.label :my_link %><br>
-    <%= f.text_field :my_link %>   
-  </div>
-  <div class="field">
-    <%= f.label :hash_code %><br>
-    <%= f.text_field :hash_code %>
-  </div>
-  <div class="field">
-  <p>
-  <%= f.submit %>
-</p>
-<% end %>
+  <%= form_for @shortcut do |f| %>
+  
+  	<div class="field">
+    	<%= f.label :my_link %><br>
+    	<%= f.text_field :my_link %>   
+  	</div>
+  	<p>
+  		<%= f.submit "Create" %>
+	</p>
+
+<%end%>

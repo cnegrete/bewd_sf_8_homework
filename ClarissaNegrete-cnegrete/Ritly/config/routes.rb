@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'shortcuts/new'
-
-  get 'shortcuts/show'
+  root to: "shortcuts#new"
 
   resources :shortcuts
+
+  get '/:hash_code', to: 'shortcuts#redirectors'
+  get '/:hash_code/preview', to: 'shortcuts#preview'
+
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
