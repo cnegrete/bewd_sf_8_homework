@@ -1,0 +1,67 @@
+<img class="background" src="http://www.installitdirect.com/wp-content/uploads/2013/07/Movie-Theater-Seating.jpg" />
+
+<h1>Search Results</h1>
+
+<style>
+	img.background {
+		position: absolute;	
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		opacity: 0.4;
+		z-index: -1;
+	}
+	body {
+		color: white;
+		font-family: sans-serif;
+	} 
+	table {
+		border: 2px solid black;
+		width: 100%;
+		padding: 15px;
+	}
+</style>
+
+<br>
+<br>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Year Released</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><div align="center"><%= movie.title %></div></td>
+        <td><div align="center"><%= movie.description %></div></td>
+  			<td><div align="center"><%= movie.year_released %></div></td>
+  			
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+
+<%= link_to 'Back', movies_path %>
+<style>
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+
+}

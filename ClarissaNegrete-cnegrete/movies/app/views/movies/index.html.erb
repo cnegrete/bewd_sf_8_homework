@@ -1,22 +1,20 @@
 <p id="notice"><%= notice %></p>
 <h1>
-<div align="center"><font color="009999">
+<div align="center"><font color="#000000">
   Movie List
 </div></font>
 </h1>
 <style>
 body {
-	background: url(https://www.directv.com/img/movies.jpg);
+	background: url(http://www.seizpacks.com/sites/default/files/images/background_color.jpg);
 	background-size: cover;
+	font-family: sans-serif;
 	
 } table {
 	border: 2px solid black;
 	width: 100%;
 	padding: 15px;}
 </style>
-<br>
-<br>
-<br>
 <br>
 <table>
   <thead>
@@ -29,19 +27,21 @@ body {
   </thead>
 
   <tbody>
-
- 	<%= form_tag movies_path, method: 'GET' do %>
-	<%= text_field_tag :q, params[:q] %>
-	<%= submit_tag 'Search' %>
-	<% end %>
-
+<br>
+	 	<%= form_tag movies_search_path, method: 'POST' do %>
+			<%= text_field_tag :q, params[:q] %>
+			<%= submit_tag 'Search' %>
+		<% end %>
+<br>
     <% @movies.each do |movie| %>
       <tr>
         <td><div align="center"><%= movie.title %></div></td>
         <td><div align="center"><%= movie.description %></div></td>
-  		<td><div align="center"><%= movie.year_released %></div></td>
+  			<td><div align="center"><%= movie.year_released %></div></td>
+  			<td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-      </div>
     <% end %>
   </tbody>
 </table>
@@ -50,3 +50,14 @@ body {
 
 <%= link_to 'New Movie', new_movie_path %>
 
+<style>
+/* unvisited link */
+a:link {
+    color: #6666FF;
+}
+
+/* visited link */
+a:visited {
+    color: #9900CC;
+
+}
