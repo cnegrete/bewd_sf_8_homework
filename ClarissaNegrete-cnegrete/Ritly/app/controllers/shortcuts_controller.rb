@@ -5,7 +5,7 @@ class ShortcutsController < ApplicationController
   end
 
   def new
-  	@shortcut = Theshortcut.new
+  	@shortcut = Shortcut.new
   end
 
   def show

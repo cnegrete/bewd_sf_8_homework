@@ -14,11 +14,6 @@
 ActiveRecord::Schema.define(version: 20150401021137) do
 
   create_table "shortcuts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "theshortcuts", force: :cascade do |t|
     t.string   "my_link"
     t.string   "hash_code"
     t.datetime "created_at", null: false
