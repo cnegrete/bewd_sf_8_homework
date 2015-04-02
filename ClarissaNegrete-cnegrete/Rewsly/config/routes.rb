@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   root 'stories#index'
   resources :stories
-  resources :users, only: :show
-  resources :comments, only: [:new, :create]
 
-  
+
+   # get 'stories/:id' => 'stories#show'
   # get 'stories/index'
 
   # get 'stories/new'

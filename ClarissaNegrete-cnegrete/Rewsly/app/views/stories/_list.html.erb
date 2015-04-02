@@ -1,0 +1,7 @@
+<li>
+	<p>
+	<% @stories.each do |story| %>
+		<b>Title</b>: <%= link_to story.title, "/stories/#{story.id}" %><br>
+	<% end %>
+	</p>
+</li>

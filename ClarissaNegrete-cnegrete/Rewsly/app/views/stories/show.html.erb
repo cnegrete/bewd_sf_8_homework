@@ -1,6 +1,11 @@
-<h1><%= @story.title %></h1>
+<li>
+  <h3><%= link_to @story.title, @story.link %></h3>
+  <p>
+    <b>Upvotes</b>: <%= @story.upvotes %><br>
+    <b>Category</b>: <%= @story.category %> <br>
+   
+  </p>
+</li>
 
-<p><%= link_to "Edit", edit_story_path(@story) %></p>
-<p><%= link_to @story.link, @story.link %></p>
-<p><%= link_to "Back to home page", root_path %></p>
 
+<%= link_to 'Back', stories_path %>

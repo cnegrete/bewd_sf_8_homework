@@ -8,20 +8,20 @@
 <% end %>
 <h1>Add a new story</h1>
 <%= form_for @story do |f| %>
-  <fieldset>
-    <legend>Story</legend>
-    <div>
+
+    <div class = "field">
       <%= f.label :title %>
       <%= f.text_field :title %>
     </div>
-    <div>
+   	<div class = "field">
       <%= f.label :link %>
       <%= f.text_field :link %>
     </div>
-    <div>
+ 	 <div class = "field">
       <%= f.label :category %>
       <%= f.text_field :category %>
     </div>
-  </fieldset>
+  <div class="actions">
   <%= f.submit %>
+  </div>
 <% end %>
