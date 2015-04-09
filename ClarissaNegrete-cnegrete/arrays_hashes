@@ -1,0 +1,8 @@
+favorite_colors = ['red', 'blue', 'yellow', 'green']
+puts favorite_colors
+
+favorite_colors.push ('purple')
+puts favorite_colors
+
+library = {"Harry Potter"=>"dumb", "some other book"=>"real"}
+puts library

@@ -1,0 +1,42 @@
+Pinterest
+
+Tables:
+
+1) Users - has many boards through pins, has many followers, has one profile picture, has many messages
+Table columns:
+id, name, email, profile picture, username, about you, location, website, created_at, is_active, 
+
+2) boards - has many pins, belongs to creator, has many members, 
+Table columns:
+id, title, creator_id, content, pin_count, 
+
+3) pins - belongs to many boards, has many likes
+Table columns:
+id, likes_count, board_id, decription, source, location, created_at, last_updated, re_pin_count, 
+
+4) messages - has one recipient, belongs to one sender
+Table columns:
+id, sender_id, recipient_id, contenct, created_at
+
+5) likes - belongs to pin
+Table columns:
+id, pin_id
+
+6) Members belong to many boards
+table columns
+id, board_id
+
+
+My Final Project:
+
+1) Users: has many likes
+Table columns:
+id, name, email
+
+2) Holiday
+Table columns:
+id, content, date, like_count
+
+3) Likes
+table columns:
+id, holiday_id, date
