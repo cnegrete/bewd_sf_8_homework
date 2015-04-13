@@ -1,0 +1,15 @@
+
+User Stories:
+
+User can login with an email and password
+User can logout
+User can view the holiday each day
+User can view what holidays fall on the next day and the previous day
+User can view holidays by month, week, and day
+User can "favorite" a holiday
+User can view a list of "favorited" holidays
+User can search for a holiday by keyword or date
+User can add a holiday 
+User can edit a holiday 
+User can delete a holiday
+
