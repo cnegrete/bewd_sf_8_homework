@@ -1,0 +1,17 @@
+CatsController: index, show, new, create, edit, update: 
+resources :cats, only: [:index, :show, :new, :create, :edit, :update]
+
+ShoesController idex,show
+resources :shoes, only: [:index, :show]
+
+FoodsController: show, edit, update
+resources :foods, only: [:show, :edit, :update]
+
+StudentsController index
+resources :students, only: [:index]
+
+VehiclesController index, search
+resources :vehicles, only: [:index, :search]
+
+FruitsController
+resources :fruits
